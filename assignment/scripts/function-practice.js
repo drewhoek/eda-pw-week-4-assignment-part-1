@@ -1,4 +1,4 @@
-console.log('***** Function Practice *****')
+console.log( '***** Function Practice *****' )
 
 // Add the required code to complete the functions below
 // After _each_ function, use a console log to call the function
@@ -9,27 +9,32 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log( 'Test - should say "Hello World!"', hello() );
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
-}
+  console.log( 'in helloName' );
+  return 'Hello, ' + name + '!';
+} // end helloName
 // Remember to call the function to test
-
+console.log( helloName( 'Drew' ) );
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
-}
+function addNumbers( firstNumber, secondNumber ) {
+  console.log( 'in addNumbers' );
+  return firstNumber + secondNumber;
+} // end addNumbers
+console.log( 'Sum of numbers is:', addNumbers( 5, 6 ) );
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
-}
+function multiplyThree( num1, num2, num3 ) {
+  console.log( 'in multiplyThree' );
+  return num1 * num2 * num3;
+} // end multiplyThree
+console.log('Product of three numbers is:', multiplyThree( 3, 4, 5 ) );
 
 
 // 5. Function that will return true if a number is positive, 
