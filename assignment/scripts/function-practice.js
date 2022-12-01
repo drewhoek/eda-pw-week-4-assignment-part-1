@@ -60,10 +60,11 @@ function getLast( array ) {
   return array[ array.length - 1];
 }
 console.log( 'if empty return:', getLast( array ) );
+// vvv For testing if working when array populated vvv
 // array.push( 4, 5, 6, 8, 9 );
 // console.log( array );
 // console.log( 'if populated return last value;', getLast( array ) );
-// ^^^ For testing if working when array populated
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
