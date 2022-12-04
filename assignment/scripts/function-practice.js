@@ -108,9 +108,23 @@ console.log( 'Sum of all values in array is', sumAll( array ) );
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+function positiveArray( newArray ) {
+  for ( let i = 0; i < newArray.length - 1; i++ ) {
+    if (newarray[ i ] > 0) {
+      newArray.push();
+      return true;
+    } else {
+      return 'Unable to add integer to array. Number is not positive. ' + false;
+    }
+  }
+}
+console.log( positiveArray( [4, 5, -1, 0] ) );
 
+// Why is newArray not able to be define here? Isn't is being inputted to the function?
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+// Ran out of time to do this this week. But I am signed up for codewars and am excited to try it.
