@@ -58,7 +58,8 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 let array = [ 4, 5, 6, 8, 9 ]
 function getLast( array ) {
   if (array.length > 1) {
-  return ( 'Last value is: ' + array[ array.length - 1 ] );
+  console.log( ( 'Last value is: ' + array[ array.length - 1 ] ) );
+  return true;
   } else {
   return undefined;
   }
@@ -69,12 +70,18 @@ console.log( getLast( array ) );
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ) {
-  for ( let i = 0; i < array.length; i++ ) {
+  let found = false
+  for ( let i = 0; !found && i < array.length; i++ ) {
     if ( value === array[ i ] ) {
-      return true;
-    } else {
-      return false;
+      found = true;
     }
+  }
+  if ( found)  {
+    console.log( 'Match found for', value );
+    return true;
+  } else {
+    console.log( 'Value not found' );
+    return false;
   }
 }
 console.log( find( 9, array ) );
@@ -110,7 +117,7 @@ console.log( 'Sum of all values in array is', sumAll( array ) );
 //     return an empty array. Note: The input array should not change.
 function positiveArray( newArray ) {
   for ( let i = 0; i < newArray.length - 1; i++ ) {
-    if (newarray[ i ] > 0) {
+    if (newArray[ i ] > 0) {
       newArray.push();
       return true;
     } else {
@@ -119,9 +126,6 @@ function positiveArray( newArray ) {
   }
 }
 console.log( positiveArray( [4, 5, -1, 0] ) );
-
-// Why is newArray not able to be define here? Isn't is being inputted to the function?
-
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
